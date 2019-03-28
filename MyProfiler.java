@@ -38,7 +38,7 @@ public class MyProfiler<K extends Comparable<K>, V> {
     	treemap.put(key, value);
     	}
     	catch(Exception e){
-    		System.out.println("unexpected exception: " + e.getMessage());
+    	
     	}
     }
     
@@ -49,10 +49,10 @@ public class MyProfiler<K extends Comparable<K>, V> {
         	treemap.get(key);
         	}
         	catch(Exception e){
-        		System.out.println("unexpected exception: " + e.getMessage());
+        
         	}
-    }
     
+    }
     public static void main(String[] args) {
         try {
         	int numElements = Integer.parseInt(args[0]);
@@ -60,7 +60,7 @@ public class MyProfiler<K extends Comparable<K>, V> {
             MyProfiler<Integer,Integer> profile = new MyProfiler<Integer, Integer>();
             ArrayList<Integer> keyList = new ArrayList<Integer>();
             Random rand = new Random();
-            
+           
             for(int numKeys = numElements; numKeys>0; numKeys--) {
             	keyList.add(rand.nextInt());
             }
